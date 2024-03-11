@@ -1,7 +1,5 @@
 <?php require __DIR__ . '/partials/header.php'; ?>
-
 <?php require __DIR__ . '/partials/nav.php'; ?>
-
 <?php require __DIR__ . '/partials/banner.php'; ?>
 
   <main>
