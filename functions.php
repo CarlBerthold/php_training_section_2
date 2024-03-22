@@ -1,4 +1,5 @@
 <?php 
+// functions that can be used in the app
 
 function dd($args) {
     echo '<pre>';

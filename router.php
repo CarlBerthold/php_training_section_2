@@ -20,7 +20,6 @@ function routeToControlller($uri, $routes) {
 }
 
 
-
 // function to abort the request with a status code
 function abort($code = 404) {
     http_response_code($code);
@@ -29,4 +28,5 @@ function abort($code = 404) {
 }
 
 routeToControlller($uri, $routes);
+
 ?>
