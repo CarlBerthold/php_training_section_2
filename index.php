@@ -8,7 +8,7 @@ require 'router.php';
 $config = require 'config.php';
 
 
-$db = new Database($config);
+$db = new Database($config['database']);
 // calling the query with the mysql query
 $posts = $db->query("select * from posts")->fetchAll();
 //dd($posts);
