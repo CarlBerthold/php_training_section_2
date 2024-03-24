@@ -3,14 +3,14 @@
 <?php 
 require 'functions.php';
 require 'Database.php';
-// require 'router.php';
+require 'router.php';
+
+$config = require 'config.php';
 
 
-
-
-$db = new Database;
+$db = new Database($config);
 // calling the query with the mysql query
-$posts = $db->query("select * from posts")->fetchAll(PDO::FETCH_ASSOC);
+$posts = $db->query("select * from posts")->fetchAll();
 //dd($posts);
 
 foreach ($posts as $post) {
