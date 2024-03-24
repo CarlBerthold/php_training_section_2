@@ -5,18 +5,22 @@ require 'functions.php';
 require 'router.php';
 
 
-
+//Database Instance
 class Database {
-    public function query($query) {
-        //connect to my Mysql database via class as blueprint;
 
-        // using dsn with all credentials to connect to the database
+    public $connection;
+    //runs immediately when the class is called to set a new PDO connection
+
+    public function __construct() {
+        // PDO instance ass connection Instance property 
         $dsn = "mysql:host=localhost;port=3306;dbname=section_2;user=root;charset=utf8mb4";
-        $pdo = new PDO($dsn);
+        $this->connection = new PDO($dsn);
 
-
+    }
+    public function query($query) {
+        
         //query the database for all posts an run it
-        $statement = $pdo->prepare($query);
+        $statement = $this->connection->prepare($query);
         $statement->execute();
 
         //save all the posts in a variable and loop through them
@@ -25,13 +29,10 @@ class Database {
 }
 
 $db = new Database;
+// calling the query with the mysql query
 $posts = $db->query("select * from posts");
 
 foreach ($posts as $post) {
     echo "<li>" . $post['title'] . "</li>";
 }
-
-
-
-
 ?>
