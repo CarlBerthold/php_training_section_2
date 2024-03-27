@@ -6,14 +6,24 @@ require 'Database.php';
 require 'router.php';
 
 $config = require 'config.php';
-
-
 $db = new Database($config['database']);
-// calling the query with the mysql query
-$posts = $db->query("select * from posts")->fetchAll();
+
+
+$id = $_GET['id'];
+$query = "select * from posts where id = :id";
+
+
+// divide the query into two parts to prevent sql injection
+//params are passed as an array using associative array
+$posts = $db->query($query, [':id' => $id])->fetch(); 
 //dd($posts);
 
-foreach ($posts as $post) {
+dd($posts);
+
+
+
+
+/* foreach ($post as $post) {
     echo "<li>" . $post['title'] . "</li>";
-}
+} */
 ?>

@@ -14,11 +14,11 @@ class Database {
     ]);
 
     }
-    public function query($query) {
+    public function query($query, $params = []) {
         
-        //query the database for all posts an run it
+        //query the database with the query and execute it with it
         $statement = $this->connection->prepare($query);
-        $statement->execute();
+        $statement->execute($params);
 
         //save all the posts in a variable and loop through them
         return $statement;
