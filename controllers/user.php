@@ -3,11 +3,11 @@ $config = require 'config.php';
 $db = new Database($config['database']);
 
 
-$heading = "My Note";
+$heading = '';
 //$currentUser = 2;
 
 
-$note = $db->query('select * from notes where id = :id', [
+$user = $db->query('select * from users where id = :id', [
     'id' => $_GET['id']
 ])->findOrFail();
 
@@ -21,5 +21,5 @@ $note = $db->query('select * from notes where id = :id', [
 
 
 
-require "./views/note.view.php";
+require "./views/user.view.php";
 ?>
