@@ -4,9 +4,7 @@ $db = new Database($config['database']);
 
 
 $heading = "My Note";
-
-// please create a varibale that holds the current user from the active session
-$currentUser = 2;
+//$currentUser = 2;
 
 
 $note = $db->query('select * from notes where id = :id', [

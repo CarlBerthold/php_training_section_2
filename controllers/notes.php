@@ -6,11 +6,11 @@ $db = new Database($config['database']);
 $heading = "My Notes";
 
 //returning all notes 
-$notes = $db->query("SELECT * FROM notes")->find();
+$notes = $db->query("SELECT * FROM notes")->findAll();
 
 
- 
-dd($notes);
+
+//dd($notes);
 
 
 
