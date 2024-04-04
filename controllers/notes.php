@@ -10,9 +10,5 @@ $notes = $db->query("SELECT * FROM notes")->findAll();
 
 
 
-//dd($notes);
-
-
-
 require "./views/notes.view.php";
 ?>
