@@ -6,7 +6,7 @@ $db = new Database($config['database']);
 $heading = "My Note";
 
 // please create a varibale that holds the current user from the active session
-$currentUser = 1;
+$currentUser = 2;
 
 
 $note = $db->query('select * from notes where id = :id', [
@@ -17,9 +17,9 @@ $note = $db->query('select * from notes where id = :id', [
 //    abort(Response::NOT_FOUND);
 //}
 
-if($note['user_id'] !== $currentUser) {
-    abort(Response::FORBIDDEN);
-}
+/* if($note['user_id'] !== $currentUser) {
+ abort(Response::FORBIDDEN);
+} */
 
 
 

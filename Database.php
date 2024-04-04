@@ -19,11 +19,12 @@ class Database {
     }
     public function query($query, $params = []) {
         
-        //query the database with the query and execute it with it
+        // query the database and execute it
         $this->statement = $this->connection->prepare($query);
         $this->statement->execute($params);
 
-        //save all the posts in a variable and loop through them
+        //return Databse PDO statement as Object
+
         return $this;
     }
 

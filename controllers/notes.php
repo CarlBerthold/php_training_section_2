@@ -5,7 +5,12 @@ $db = new Database($config['database']);
 
 $heading = "My Notes";
 
-$notes = $db->query("select * from notes")->find();
+//returning all notes 
+$notes = $db->query("SELECT * FROM notes")->find();
+
+
+ 
+dd($notes);
 
 
 

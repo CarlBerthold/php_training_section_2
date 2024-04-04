@@ -8,6 +8,12 @@ function dd($args) {
     die();
 }
 
+function dump($args) {
+    echo '<pre>';
+    var_dump($args);
+    echo '</pre>';
+}
+
 
 function urlIs($path) {
     return $_SERVER['REQUEST_URI'] === $path;
