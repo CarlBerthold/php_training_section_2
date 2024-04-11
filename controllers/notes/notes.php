@@ -7,6 +7,8 @@ $heading = "Notes";
 
 $create = "<a href='/notes/create'>Create a Note</a>";
 
+$note = '';
+
 //returning all notes 
 $notes = $db->query("SELECT * FROM notes")->findAll();
 

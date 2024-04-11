@@ -14,15 +14,11 @@ $heading = "Create a Note";
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $errors = [];
 
-    $validator = new Validator();
+  
 
 
-    if($validator->string($_POST['content'])) {
-        $errors['content'] = "Content is required";
-    }
-
-    if(strlen($_POST['content']) > 1000) {
-        $errors['content'] = "Content is too long";
+    if(! validator::string($_POST['content'], 1, 1000)) {
+        $errors['content'] = "Content can only be 1000 characters long";
     }
 
 

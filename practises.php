@@ -35,7 +35,7 @@ function register($user) {
 
 
 require "index.view.php";
-include
+include "index.view.php"
 
 
 

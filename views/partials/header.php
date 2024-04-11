@@ -8,4 +8,4 @@
     <link href="haus.png" rel="icon">
 </head>
 <body class="h-full">
-<div class="min-h-full">
+<div>
