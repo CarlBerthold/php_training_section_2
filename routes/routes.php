@@ -4,9 +4,10 @@
 return $routes = [
         '/' => 'controllers/index.php',
         '/about' => 'controllers/about.php',
-        '/notes'=> 'controllers/notes/notes.php',
-        '/note'=> 'controllers//notes/note.php',
+        '/notes'=> 'controllers/notes/index.php',
+        '/note'=> 'controllers//notes/show.php',
         '/notes/create'=> 'controllers/notes/create.php',
+        '/notes/edit'=> 'controllers/notes/edit.php',
         '/contact' => 'controllers/contact.php',
         '/user' => 'controllers/user.php',
     ];

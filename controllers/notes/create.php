@@ -15,8 +15,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $errors = [];
 
   
-
-
     if(! validator::string($_POST['content'], 1, 1000)) {
         $errors['content'] = "Content can only be 1000 characters long";
     }
@@ -32,6 +30,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
-require "./views/noteCreate.view.php";
+require "views/notes/create.view.php"
 
 ?>

@@ -1,6 +1,7 @@
-<?php require __DIR__ . '/partials/header.php'; ?>
-<?php require __DIR__ . '/partials/nav.php'; ?>
-<?php require __DIR__ . '/partials/banner.php'; ?>
+<?php require(__DIR__ . '/../partials/header.php'); ?>
+<?php require(__DIR__ . '/../partials/nav.php'); ?>
+<?php require(__DIR__ . '/../partials/banner.php'); ?>
+
 
 
 
@@ -16,4 +17,4 @@
     </div>
   </main>
 
-<?php require __DIR__ . '/partials/footer.php'; ?>
+<?php require(__DIR__ . '/../partials/footer.php'); ?>
